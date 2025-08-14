@@ -24,11 +24,11 @@ class StockInfo:
     stock_code: str
     full_code: str
     market: str
-    mark: Optional[str] = None
-    tip: Optional[str] = None
-    tipword: Optional[str] = None
-    tipcolor: Optional[str] = None
-    time: Optional[str] = None
+    mark_level: Optional[str] = None
+    tip_text: Optional[str] = None
+    tipword_tags: List[str] = field(default_factory=list)
+    tip_color: Optional[str] = None
+    time_info: Optional[str] = None
     
     def __post_init__(self):
         """初始化后验证数据"""

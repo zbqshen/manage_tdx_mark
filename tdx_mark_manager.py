@@ -130,6 +130,7 @@ class TdxMarkManager:
         self._lock = threading.Lock()  # 线程安全锁
         self._operation_history = []   # 操作历史
         self._current_data_hash = None # 当前数据哈希值
+        self._cached_all_data = None
         
         self.logger.info(f"TdxMarkManager v3.0 初始化完成，目标文件: {self.mark_dat_path}")
         self.logger.info(f"备份目录: {self.backup_dir}")
@@ -1880,6 +1881,24 @@ class TdxMarkManager:
             samples[section] = section_samples
         
         return samples
+
+    def _read_all_data_cached(self) -> Dict[str, Dict[str, str]]:
+        if self._cached_all_data is not None:
+            return self._cached_all_data
+        
+        data = self.load_data(create_backup=False)
+        all_codes = set()
+        for section_data in data.values():
+            all_codes.update(section_data.keys())
+        
+        self._cached_all_data = {}
+        for code in all_codes:
+            self._cached_all_data[code] = {
+                section: data.get(section, {}).get(code, '')
+                for section in self.supported_sections
+            }
+        
+        return self._cached_all_data
 
 
 def main():

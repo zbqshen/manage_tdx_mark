@@ -28,3 +28,71 @@
 2025-08-14 01:18:52 - tdx_mark_manager - INFO - 数据完整性检查完成，总记录数: 7117
 2025-08-14 01:18:52 - tdx_mark_manager - INFO - 备份创建成功: D:\OneDrive\coding\manage_tdx_mark\backups\mark_backup_20250814_011852.dat
 2025-08-14 01:18:52 - tdx_mark_manager - INFO - 数据保存成功: D:\Tdx MPV V1.24++\T0002\mark.dat, 共 7127 行
+2025-08-14 11:56:15 - tdx_mark_manager - INFO - TdxMarkManager v3.0 初始化完成，目标文件: D:\Tdx MPV V1.24++\T0002\mark.dat
+2025-08-14 11:56:15 - tdx_mark_manager - INFO - 备份目录: D:\OneDrive\coding\manage_tdx_mark\backups
+2025-08-14 11:56:15 - tdx_mark_manager - INFO - 日志目录: D:\OneDrive\coding\manage_tdx_mark\log
+2025-08-14 11:56:16 - tdx_mark_manager - INFO - 备份创建成功: D:\OneDrive\coding\manage_tdx_mark\backups\mark_backup_20250814_115615.dat
+2025-08-14 11:56:16 - tdx_mark_manager - INFO - 成功读取文件，大小: 819999 字符
+2025-08-14 11:56:16 - tdx_mark_manager - INFO - 解析完成，共 5 个区块，7137 条记录
+2025-08-14 11:56:16 - tdx_mark_manager - INFO - 数据完整性检查完成，总记录数: 7137
+2025-08-14 11:56:16 - tdx_mark_manager - INFO - 备份创建成功: D:\OneDrive\coding\manage_tdx_mark\backups\mark_backup_20250814_115616.dat
+2025-08-14 11:56:16 - tdx_mark_manager - INFO - 数据保存成功: D:\Tdx MPV V1.24++\T0002\mark.dat, 共 7147 行
+2025-08-14 11:56:50 - tdx_mark_manager - INFO - TdxMarkManager v3.0 初始化完成，目标文件: D:\Tdx MPV V1.24++\T0002\mark.dat
+2025-08-14 11:56:50 - tdx_mark_manager - INFO - 备份目录: D:\OneDrive\coding\manage_tdx_mark\backups
+2025-08-14 11:56:50 - tdx_mark_manager - INFO - 日志目录: D:\OneDrive\coding\manage_tdx_mark\log
+2025-08-14 11:56:50 - tdx_mark_manager - INFO - 备份创建成功: D:\OneDrive\coding\manage_tdx_mark\backups\mark_backup_20250814_115650.dat
+2025-08-14 11:56:50 - tdx_mark_manager - INFO - 成功读取文件，大小: 819999 字符
+2025-08-14 11:56:50 - tdx_mark_manager - INFO - 解析完成，共 5 个区块，7137 条记录
+2025-08-14 11:56:50 - tdx_mark_manager - INFO - 数据完整性检查完成，总记录数: 7137
+2025-08-14 11:56:50 - tdx_mark_manager - INFO - 备份创建成功: D:\OneDrive\coding\manage_tdx_mark\backups\mark_backup_20250814_115650.dat
+2025-08-14 11:56:50 - tdx_mark_manager - INFO - 数据保存成功: D:\Tdx MPV V1.24++\T0002\mark.dat, 共 7147 行
+2025-08-14 14:17:03 - tdx_mark_manager - INFO - TdxMarkManager v3.0 初始化完成，目标文件: D:\Tdx MPV V1.24++\T0002\mark.dat
+2025-08-14 14:17:03 - tdx_mark_manager - INFO - 备份目录: D:\OneDrive\coding\manage_tdx_mark\backups
+2025-08-14 14:17:03 - tdx_mark_manager - INFO - 日志目录: D:\OneDrive\coding\manage_tdx_mark\log
+2025-08-14 14:17:03 - tdx_mark_manager - INFO - 备份创建成功: D:\OneDrive\coding\manage_tdx_mark\backups\mark_backup_20250814_141703.dat
+2025-08-14 14:17:03 - tdx_mark_manager - INFO - 成功读取文件，大小: 824093 字符
+2025-08-14 14:17:03 - tdx_mark_manager - INFO - 解析完成，共 5 个区块，7145 条记录
+2025-08-14 14:17:03 - tdx_mark_manager - INFO - 成功删除股票: 000001, 从 5 个区块中删除
+2025-08-14 14:17:03 - tdx_mark_manager - INFO - 数据完整性检查完成，总记录数: 7140
+2025-08-14 14:17:03 - tdx_mark_manager - INFO - 备份创建成功: D:\OneDrive\coding\manage_tdx_mark\backups\mark_backup_20250814_141703.dat
+2025-08-14 14:17:03 - tdx_mark_manager - INFO - 数据保存成功: D:\Tdx MPV V1.24++\T0002\mark.dat, 共 7150 行
+2025-08-14 14:18:45 - tdx_mark_manager - INFO - TdxMarkManager v3.0 初始化完成，目标文件: D:\Tdx MPV V1.24++\T0002\mark.dat
+2025-08-14 14:18:45 - tdx_mark_manager - INFO - 备份目录: D:\OneDrive\coding\manage_tdx_mark\backups
+2025-08-14 14:18:45 - tdx_mark_manager - INFO - 日志目录: D:\OneDrive\coding\manage_tdx_mark\log
+2025-08-14 14:19:14 - tdx_mark_manager - INFO - TdxMarkManager v3.0 初始化完成，目标文件: D:\Tdx MPV V1.24++\T0002\mark.dat
+2025-08-14 14:19:14 - tdx_mark_manager - INFO - 备份目录: D:\OneDrive\coding\manage_tdx_mark\backups
+2025-08-14 14:19:14 - tdx_mark_manager - INFO - 日志目录: D:\OneDrive\coding\manage_tdx_mark\log
+2025-08-14 14:19:14 - tdx_mark_manager - INFO - 备份创建成功: D:\OneDrive\coding\manage_tdx_mark\backups\mark_backup_20250814_141914.dat
+2025-08-14 14:19:14 - tdx_mark_manager - INFO - 成功读取文件，大小: 824087 字符
+2025-08-14 14:19:14 - tdx_mark_manager - INFO - 解析完成，共 5 个区块，7145 条记录
+2025-08-14 14:19:14 - tdx_mark_manager - INFO - 成功从TIP区块删除股票: 000001
+2025-08-14 14:19:14 - tdx_mark_manager - INFO - 数据完整性检查完成，总记录数: 7144
+2025-08-14 14:19:14 - tdx_mark_manager - INFO - 备份创建成功: D:\OneDrive\coding\manage_tdx_mark\backups\mark_backup_20250814_141914.dat
+2025-08-14 14:19:14 - tdx_mark_manager - INFO - 数据保存成功: D:\Tdx MPV V1.24++\T0002\mark.dat, 共 7154 行
+2025-08-14 15:37:45 - tdx_mark_manager - INFO - TdxMarkManager v3.0 初始化完成，目标文件: D:\Tdx MPV V1.24++\T0002\mark.dat
+2025-08-14 15:37:45 - tdx_mark_manager - INFO - 备份目录: D:\OneDrive\coding\manage_tdx_mark\backups
+2025-08-14 15:37:45 - tdx_mark_manager - INFO - 日志目录: D:\OneDrive\coding\manage_tdx_mark\log
+2025-08-14 15:38:02 - tdx_mark_manager - INFO - TdxMarkManager v3.0 初始化完成，目标文件: D:\Tdx MPV V1.24++\T0002\mark.dat
+2025-08-14 15:38:02 - tdx_mark_manager - INFO - 备份目录: D:\OneDrive\coding\manage_tdx_mark\backups
+2025-08-14 15:38:02 - tdx_mark_manager - INFO - 日志目录: D:\OneDrive\coding\manage_tdx_mark\log
+2025-08-14 15:44:39 - tdx_mark_manager - INFO - TdxMarkManager v3.0 初始化完成，目标文件: D:\Tdx MPV V1.24++\T0002\mark.dat
+2025-08-14 15:44:39 - tdx_mark_manager - INFO - 备份目录: D:\OneDrive\coding\manage_tdx_mark\backups
+2025-08-14 15:44:39 - tdx_mark_manager - INFO - 日志目录: D:\OneDrive\coding\manage_tdx_mark\log
+2025-08-14 15:49:36 - tdx_mark_manager - INFO - TdxMarkManager v3.0 初始化完成，目标文件: D:\Tdx MPV V1.24++\T0002\mark.dat
+2025-08-14 15:49:36 - tdx_mark_manager - INFO - 备份目录: d:\OneDrive\coding\manage_tdx_mark\backups
+2025-08-14 15:49:36 - tdx_mark_manager - INFO - 日志目录: d:\OneDrive\coding\manage_tdx_mark\log
+2025-08-14 15:52:13 - tdx_mark_manager - INFO - TdxMarkManager v3.0 初始化完成，目标文件: D:\Tdx MPV V1.24++\T0002\mark.dat
+2025-08-14 15:52:13 - tdx_mark_manager - INFO - 备份目录: d:\OneDrive\coding\manage_tdx_mark\backups
+2025-08-14 15:52:13 - tdx_mark_manager - INFO - 日志目录: d:\OneDrive\coding\manage_tdx_mark\log
+2025-08-14 15:52:13 - tdx_mark_manager - INFO - 成功读取文件，大小: 823587 字符
+2025-08-14 15:52:13 - tdx_mark_manager - INFO - 解析完成，共 5 个区块，7144 条记录
+2025-08-14 15:54:03 - tdx_mark_manager - INFO - TdxMarkManager v3.0 初始化完成，目标文件: D:\Tdx MPV V1.24++\T0002\mark.dat
+2025-08-14 15:54:03 - tdx_mark_manager - INFO - 备份目录: d:\OneDrive\coding\manage_tdx_mark\backups
+2025-08-14 15:54:03 - tdx_mark_manager - INFO - 日志目录: d:\OneDrive\coding\manage_tdx_mark\log
+2025-08-14 15:54:03 - tdx_mark_manager - INFO - 成功读取文件，大小: 823587 字符
+2025-08-14 15:54:03 - tdx_mark_manager - INFO - 解析完成，共 5 个区块，7144 条记录
+2025-08-14 15:56:02 - tdx_mark_manager - INFO - TdxMarkManager v3.0 初始化完成，目标文件: D:\Tdx MPV V1.24++\T0002\mark.dat
+2025-08-14 15:56:02 - tdx_mark_manager - INFO - 备份目录: d:\OneDrive\coding\manage_tdx_mark\backups
+2025-08-14 15:56:02 - tdx_mark_manager - INFO - 日志目录: d:\OneDrive\coding\manage_tdx_mark\log
+2025-08-14 15:56:02 - tdx_mark_manager - INFO - 成功读取文件，大小: 823587 字符
+2025-08-14 15:56:02 - tdx_mark_manager - INFO - 解析完成，共 5 个区块，7144 条记录

@@ -48,7 +48,10 @@
 # 核心组件导入
 from .tdx_mark_manager import TdxMarkManager
 from .data_service import DataOperationService
-from .safe_batch_service import SafeBatchService, SafeBatchConfig, create_safe_batch_config
+from .safe_batch_service import (
+    SafeBatchService, SafeBatchConfig, SafeDeleteConfig,
+    DeleteMode, create_safe_batch_config
+)
 from .models import (
     StockInfo, ValidationResult, OperationResult, 
     BatchOperationResult, DataStats, BackupInfo
@@ -79,6 +82,8 @@ __all__ = [
     
     # 配置和工具
     'SafeBatchConfig',
+    'SafeDeleteConfig',
+    'DeleteMode',
     'create_safe_batch_config',
     
     # 数据模型

@@ -204,7 +204,7 @@ max_remark_length = 500
 - **时间统计**：操作耗时和性能分析
 - **错误分析**：详细的错误信息和建议
 
-### 快速使用示例
+### 🔥 批量操作示例
 
 #### 基础批量操作
 ```python
@@ -232,7 +232,83 @@ else:
     print(f"❌ 失败项目：{result.failed_items}")
 ```
 
-#### 自定义配置
+#### 🗑️ 批量删除操作（新功能）
+
+#### 批量删除整个股票数据
+```python
+from manage_tdx_mark import SafeBatchService
+
+service = SafeBatchService()
+
+# 批量删除股票的所有数据
+stock_codes = ["600613", "000001", "002415"]
+result = service.batch_delete_stocks(stock_codes)
+
+print(f"删除成功率：{result.overall_success_rate:.1f}%")
+print(f"成功删除：{result.total_successful_items} 只股票")
+```
+
+#### 批量删除指定区块
+```python
+from manage_tdx_mark import SafeBatchService, SafeDeleteConfig
+
+service = SafeBatchService()
+
+# 只删除特定区块的数据
+config = SafeDeleteConfig(
+    chunk_size=5,
+    confirm_threshold=10  # 超过10条需要确认
+)
+
+# 删除多只股票的TIPWORD数据
+stock_codes = ["600613", "000001", "002415"]
+result = service.batch_delete_from_section(stock_codes, "TIPWORD", config)
+
+print(f"删除成功率：{result.overall_success_rate:.1f}%")
+```
+
+#### 批量清理空值数据
+```python
+# 安全清理所有空值
+result = service.batch_clear_empty()
+
+print(f"清理了 {result.total_successful_items} 条空值记录")
+```
+
+#### 批量删除特定标签
+```python
+# 批量删除特定的TIPWORD标签
+tipword_deletions = {
+    "600613": ["白马"],           # 只删除"白马"标签
+    "000001": ["金融", "银行"],    # 删除多个标签
+    "002415": ["科技"]            # 删除"科技"标签
+}
+
+result = service.batch_delete_tipwords(tipword_deletions)
+
+print(f"标签删除成功率：{result.overall_success_rate:.1f}%")
+```
+
+#### 删除配置选项
+```python
+from manage_tdx_mark import SafeDeleteConfig, DeleteMode
+
+# 创建删除配置
+config = SafeDeleteConfig(
+    delete_mode=DeleteMode.ALL,      # 删除模式：ALL/SECTION/EMPTY/TIPWORD
+    chunk_size=5,                    # 每组5个项目
+    success_threshold=100.0,         # 100%成功率要求
+    auto_rollback=True,              # 自动回退
+    confirm_threshold=10,            # 超过10条需要确认
+    verify_after_delete=True,        # 删除后验证数据
+    create_summary_report=True       # 创建详细报告
+)
+
+# 使用配置执行删除
+result = service.batch_delete_stocks(stock_codes, config)
+```
+
+### 自定义配置
 ```python
 from manage_tdx_mark import SafeBatchService, create_safe_batch_config
 
@@ -550,6 +626,84 @@ print(f"  标记成功率：{result1.overall_success_rate:.1f}%")
 print(f"  备注成功率：{result2.overall_success_rate:.1f}%")
 print(f"  标签成功率：{result3.overall_success_rate:.1f}%")
 ```
+
+---
+
+## 🔍 简单查询功能
+
+SafeBatchService 提供两种简洁的查询方式：股票代码查询和关键词搜索。
+
+### 查询示例
+
+#### 1. 股票代码查询
+```python
+from manage_tdx_mark import SafeBatchService
+
+service = SafeBatchService()
+
+# 查询指定股票（支持6位或8位代码）
+stocks = service.safe_batch_query(["600613", "000001", "300059"])
+
+for stock in stocks:
+    print(f"股票: {stock.stock_code}")
+    print(f"标记: {stock.mark_level}")
+    print(f"备注: {stock.tip_text}")
+    print(f"标签: {', '.join(stock.tipword_tags)}")
+    print("---")
+```
+
+#### 2. 关键词模糊搜索
+```python
+# 搜索包含"科技"的股票（在所有字段中搜索）
+tech_stocks = service.safe_batch_query("科技")
+
+print(f"找到 {len(tech_stocks)} 只科技股票")
+for stock in tech_stocks:
+    print(f"{stock.stock_code}: {stock.tip_text}")
+```
+
+#### 3. 实用搜索场景
+```python
+# 搜索白马股
+white_horse = service.safe_batch_query("白马")
+
+# 搜索消费类股票
+consumer = service.safe_batch_query("消费")
+
+# 搜索高关注度股票（标记等级8、9）
+high_attention = service.safe_batch_query("9")
+
+# 查询多只重点关注股票
+key_stocks = service.safe_batch_query([
+    "600613",  # 东阿阿胶
+    "000858",  # 五粮液
+    "000001"   # 平安银行
+])
+```
+
+### API 说明
+
+```python
+def safe_batch_query(self, query: Union[str, List[str]]) -> List[StockInfo]:
+    """
+    安全批量查询股票数据
+    
+    Args:
+        query: 查询条件
+            - str: 关键词模糊查询（在股票代码、备注、标签等字段中搜索）
+            - List[str]: 股票代码精确查询（支持6位或8位代码）
+            
+    Returns:
+        List[StockInfo]: 符合条件的股票数据列表
+    """
+```
+
+**特点**：
+- 🎯 **简单直观**：只有两种查询方式，易于理解
+- ⚡ **高性能**：使用缓存机制，查询速度快
+- 🔍 **智能搜索**：关键词搜索覆盖所有重要字段
+- 📄 **无分页**：直接返回所有符合条件的结果
+- 🛡️ **安全可靠**：保持SafeBatchService的安全特性
 
 ---
 
